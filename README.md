@@ -2,7 +2,7 @@
 Changes the first and last names of every user in your Planning Center account to start with an uppercase letter.
 
 
-###To Use:
+### To Use:
 1. Install the python requests library » http://docs.python-requests.org/en/master/user/install/
 2. Change the Planning Center API Activity ID and Secret Key » https://api.planningcenteronline.com/oauth/applications
 3. Change the number of church attendees in your Planning Center account. This number can be found on your People dashboard.
