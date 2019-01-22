@@ -1,16 +1,16 @@
-import requests # you must install the python requests library before running http://docs.python-requests.org/en/master/user/install/
+import requests # you must install the python requests library before running. http://docs.python-requests.org/en/master/user/install/
 import json
 import time
 
-# change this to the number of church attendees in your Planning Center People account
+# change this to the number of church attendees in your Planning Center People account. number must include active + inactive users.
 numberofusers = 777
 
-# https://api.planningcenteronline.com/oauth/applications to get your planning center application id and secret key
+# change these. visit https://api.planningcenteronline.com/oauth/applications to get your planning center application id and secret key.
 planning_center_activity_id='c743bf00cbhh1348574fbebcfab'      # example 'c743bf0cbhh13d55b9649944fbebcfab'
 planning_center_secret='baf8544a1c23423aabce1e32cdc9ae89'      # example  'baf854a1c23426585fs0d41eabbcef2b1e32cdc9ae89'
 
-offsetnumber = 0 # leave at 0 to start from the beginning of your list
-per_page = 100  # acceptable values are 1-100, 100 is the max amount of names you can call at a time and makes the script run the quickest
+offsetnumber = 0 # leave at 0 to start from the beginning of your list.
+per_page = 100  # acceptable values are 1-100, 100 is the max amount of names you can call at a time and makes the script run the quickest.
 
 
 # ----------------------------------
@@ -66,4 +66,6 @@ while offsetnumber < numberofusers:
     renameuppercase(offsetnumber,per_page)
     offsetnumber = offsetnumber + per_page
     print("Finished with the first",offsetnumber, "people!")
-    time.sleep(2) # sleep between json pulls so that you don't exceed the rate limit of 100 per 20 seconds, however unlikely it may be
+    time.sleep(2) # sleep between json pulls so that you don't exceed the rate limit of 100 per 20 seconds, however unlikely it may be.
+
+print("Hooray! Capitalizing names completed.")
